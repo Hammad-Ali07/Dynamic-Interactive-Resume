@@ -108,17 +108,19 @@ input:focus, textarea:focus {
 }
 
 button {
-    padding: 10px 20px;
+    padding: 14px 24px;
     background-color: #ff4081;
     color: #ffffff;
     border: none;
-    border-radius: 20px;
-    margin-left: 530px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 14px;
+    font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    width: 20%; /* Full width button for smaller screens */
+    width: 100%; /* Full width button for smaller screens */
+}
+#backButton{
+    width: 100%;
 }
 
 button:hover {
@@ -130,19 +132,22 @@ button:hover {
 .resume-photo {
     width: 150px;
     height: 150px;
-    margin-left: 260px;
     border-radius: 50%;
     margin-bottom: 20px;
     border: 4px solid #ff4081;
     transition: transform 0.4s ease, border-color 0.3s ease;
+    margin-left: 35%;
+    
 }
+#backButton{
+    width: 30%;
+    margin-left: 35%;
+}
+
 
 .resume-photo:hover {
     transform: scale(1.1); /* Reduced hover effect for better performance on mobile */
     border-color: #c51162;
-}
-#backbutton{
-    width: 50%;
 }
 
 /* Responsive Styles */
@@ -167,6 +172,7 @@ button:hover {
         width: 120px;
         height: 120px;
     }
+
 }
 
 /* Mobile Devices */
@@ -200,7 +206,7 @@ button:hover {
 }
 
 /* Smaller Mobile Devices */
-@media (max-width: 360px) {
+@media (max-width: 344px) {
     .container {
         padding: 8px;
         max-width: 100%;
@@ -223,4 +229,8 @@ button:hover {
         width: 90px;
         height: 90px;
     }
+ 
+
+
 }
+
