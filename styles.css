@@ -162,7 +162,7 @@ button:hover:before {
 @media (max-width: 768px) {
     .container {
         padding: 15px;
-        max-width: 95%; /* Reduce padding for smaller screens */
+        max-width: 95vw; /* Reduce padding for smaller screens */
     }
 
     input, textarea {
@@ -179,11 +179,44 @@ button:hover:before {
         height: 120px;
     }
 }
+@media (max-width: 544px) {
+    .container {
+        padding: 0;
+        max-width: 100%;
+        height: 100vh;
+    }
+
+    h1, h2 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    input, textarea {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .resume-photo {
+        width: 100px;
+        height: 100px;
+    }
+}
 
 @media (max-width: 480px) {
     .container {
         padding: 10px;
-        max-width: 100%;
+        max-width: 95vw;
+        height: 100vh;
+
     }
 
     h1, h2 {
@@ -217,6 +250,8 @@ button:hover:before {
     .container {
         padding: 8px;
         width: 100%;
+        height: 100vh;
+
         
     }
 
