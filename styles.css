@@ -7,8 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    min-height: 100vh; /* Changed from height to min-height */
     animation: backgroundAnimation 15s ease-in-out infinite;
 }
 
@@ -26,14 +25,14 @@ body {
 
 .container, .resume-page {
     background-color: #ffffff;
-    padding: 30px;
+    padding: 20px;
     box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
     max-width: 700px;
-    width: 100%;
+    width: 90%; /* Adjusted width for responsiveness */
     border-radius: 12px;
     transition: box-shadow 0.4s ease, transform 0.4s ease;
-    position: relative;
     animation: fadeIn 1s ease-out, scaleUp 1s ease-out;
+    margin: 20px 0; /* Added margin for better spacing on mobile */
 }
 
 .container:hover, .resume-page:hover {
@@ -118,30 +117,13 @@ button {
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    position: relative;
+    width: 100%; /* Full width button for smaller screens */
 }
 
 button:hover {
     background-color: #c51162;
-    transform: scale(1.1);
+    transform: scale(1.05); /* Slightly reduced scale for mobile */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-button:before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 300%;
-    height: 300%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, rgba(255, 255, 255, 0) 30%);
-    transition: opacity 0.3s ease;
-    transform: translate(-50%, -50%);
-    opacity: 0;
-}
-
-button:hover:before {
-    opacity: 1;
 }
 
 .resume-photo {
@@ -154,19 +136,21 @@ button:hover:before {
 }
 
 .resume-photo:hover {
-    transform: scale(1.15);
+    transform: scale(1.1); /* Reduced hover effect for better performance on mobile */
     border-color: #c51162;
 }
 
 /* Responsive Styles */
+
+/* Tablets */
 @media (max-width: 768px) {
     .container {
         padding: 15px;
-        max-width: 95vw; /* Reduce padding for smaller screens */
+        max-width: 90vw;
     }
 
-    input, textarea {
-        font-size: 14px;
+    h1, h2 {
+        font-size: 1.8rem;
     }
 
     button {
@@ -179,62 +163,28 @@ button:hover:before {
         height: 120px;
     }
 }
+
+/* Mobile Devices */
 @media (max-width: 544px) {
-    .container {
-        padding: 0;
-        max-width: 100%;
-        height: 100vh;
-    }
-
-    h1, h2 {
-        font-size: 1.4rem;
-    }
-
-    h2 {
-        font-size: 1.2rem;
-    }
-
-    input, textarea {
-        font-size: 16px;
-        padding: 10px;
-    }
-
-    button {
-        width: 100%;
-        padding: 12px;
-        font-size: 14px;
-    }
-
-    .resume-photo {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-@media (max-width: 480px) {
     .container {
         padding: 10px;
         max-width: 95vw;
-        height: 100vh;
-
     }
 
-    h1, h2 {
-        font-size: 1.4rem;
+    h1 {
+        font-size: 1.5rem;
     }
 
     h2 {
-        font-size: 1.2rem;
+        font-size: 1.3rem;
     }
 
     input, textarea {
-        font-size: 16px;
-        padding: 10px;
+        font-size: 14px;
     }
 
     button {
-        width: 100%;
-        padding: 12px;
+        padding: 10px;
         font-size: 14px;
     }
 
@@ -244,24 +194,24 @@ button:hover:before {
     }
 }
 
+/* Smaller Mobile Devices */
 @media (max-width: 360px) {
-    
-    
     .container {
         padding: 8px;
-        width: 100%;
-        height: 100vh;
+        max-width: 100%;
+    }
 
-        
+    h1, h2 {
+        font-size: 1.3rem;
     }
 
     input, textarea {
-        font-size: 14px;
+        font-size: 12px;
     }
 
     button {
-        padding: 10px;
         font-size: 12px;
+        padding: 8px;
     }
 
     .resume-photo {
